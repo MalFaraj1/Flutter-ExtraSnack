@@ -54,6 +54,7 @@ void removeOrder(BuildContext context, int id) async{
 
 void updateOrders() async{
   const url = 'http://10.0.2.2/restoSys/getorders.php';
+  //const url = 'http://ExtraSnack.free.nf/getorders.php';
   final response = await http.get(Uri.parse(url));
 
   _orders.clear();
@@ -75,6 +76,7 @@ void updateOrders() async{
 
 void updateUserOrders() async{
   const url = 'http://10.0.2.2/restoSys/getuserorders.php';
+  //const url = 'http://ExtraSnack.free.nf/getuserorders.php';
   final response = await http.post(
     Uri.parse(url),
     body: convert.jsonEncode({
@@ -103,6 +105,7 @@ void updateUserOrders() async{
 
 void addOrder(BuildContext context, String quantity ,int iID, int uID) async{
   const url = 'http://10.0.2.2/restoSys/addorder.php';
+  //const url = 'http://ExtraSnack.free.nf/addorder.php';
   final response = await http.post(
     Uri.parse(url),
     body: convert.jsonEncode({
