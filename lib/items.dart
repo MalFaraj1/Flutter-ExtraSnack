@@ -35,6 +35,7 @@ List<Items> _items = [];
 
 void updateItems() async {
   const url = 'http://10.0.2.2/restoSys/getitems.php';
+  //const url = 'http://ExtraSnack.free.nf/getitems.php';
   final response = await http.get(Uri.parse(url));
 
   _items.clear();
@@ -60,6 +61,7 @@ void updateItems() async {
 
 void removeItem(BuildContext context, int id) async {
   const url = 'http://10.0.2.2/restoSys/removeitem.php';
+  //const url = 'http://ExtraSnack.free.nf/removeitem.php';
   final response = await http.post(
     Uri.parse(url),
     body: convert.jsonEncode({
@@ -208,6 +210,7 @@ class addItem extends StatelessWidget {
   Future<void> addItems(BuildContext context, String name, String description,
       String category, String price, String image) async {
     const url = 'http://10.0.2.2/restoSys/additem.php';
+    //const url = 'http://ExtraSnack.free.nf/additem.php';
     final response = await http.post(
       Uri.parse(url),
       body: convert.jsonEncode({
