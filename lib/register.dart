@@ -12,6 +12,7 @@ class RegisterPage extends StatelessWidget {
 
   Future<void> registerUser(BuildContext context, String username, String password, String email) async {
     const url = 'http://10.0.2.2/restoSys/adduser.php';
+    //const url = 'http://ExtraSnack.free.nf/adduser.php';
     final response = await http.post(
       Uri.parse(url),
       body: jsonEncode({
