@@ -31,6 +31,7 @@ List<Orders> _orders = [];
 
 void removeOrder(BuildContext context, int id) async{
   const url = 'http://10.0.2.2/restoSys/removeorder.php';
+  //const url = 'http://ExtraSnack.free.nf/removeorder.php';
   final response = await http.post(
     Uri.parse(url),
     body: convert.jsonEncode({
